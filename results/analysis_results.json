@@ -1,0 +1,138 @@
+{
+  "summary_table": [
+    {
+      "Scenario": "Baseline (S0: WH1 Chicago Only)",
+      "Avg Distance (km)": 1407.9,
+      "Avg Shipping Cost ($)": 37.51,
+      "Total Annual Freight ($)": 697620.06,
+      "Avg Lead Time (Days)": 4.05,
+      "2-Day Service Level (%)": 16.3
+    },
+    {
+      "Scenario": "Scenario 1 (S1: Chicago + LA)",
+      "Avg Distance (km)": 868.8,
+      "Avg Shipping Cost ($)": 29.92,
+      "Total Annual Freight ($)": 556454.85,
+      "Avg Lead Time (Days)": 2.93,
+      "2-Day Service Level (%)": 27.9
+    },
+    {
+      "Scenario": "Scenario 2 (S2: Chicago + Atlanta)",
+      "Avg Distance (km)": 1237.7,
+      "Avg Shipping Cost ($)": 35.06,
+      "Total Annual Freight ($)": 652068.8,
+      "Avg Lead Time (Days)": 3.67,
+      "2-Day Service Level (%)": 30.5
+    }
+  ],
+  "zonal_table": [
+    {
+      "region": "Midwest",
+      "Order_Count": 3743,
+      "Avg_Distance_km": 297.1503606732568,
+      "Avg_Cost_S0": 22.1177798557307,
+      "Total_Cost_S0": 82786.85,
+      "Avg_Lead_S0": 1.6881645738712263,
+      "Service_Lvl_S0": 76.83676195565054,
+      "Avg_Cost_S1": 22.060571733903288,
+      "Service_Lvl_S1": 80.28319529788939
+    },
+    {
+      "region": "Northeast",
+      "Order_Count": 4104,
+      "Avg_Distance_km": 1156.5170565302144,
+      "Avg_Cost_S0": 33.879973196881096,
+      "Total_Cost_S0": 139043.41,
+      "Avg_Lead_S0": 3.5734649122807016,
+      "Service_Lvl_S0": 0.7066276803118908,
+      "Avg_Cost_S1": 33.85892543859649,
+      "Service_Lvl_S1": 0.31676413255360625
+    },
+    {
+      "region": "Northwest",
+      "Order_Count": 1482,
+      "Avg_Distance_km": 2780.498987854251,
+      "Avg_Cost_S0": 56.42170715249663,
+      "Total_Cost_S0": 83616.97,
+      "Avg_Lead_S0": 6.863967611336032,
+      "Service_Lvl_S0": 0.0,
+      "Avg_Cost_S1": 36.8727665317139,
+      "Service_Lvl_S1": 0.0
+    },
+    {
+      "region": "Southeast",
+      "Order_Count": 3768,
+      "Avg_Distance_km": 1039.763110403397,
+      "Avg_Cost_S0": 32.47711252653928,
+      "Total_Cost_S0": 122373.76,
+      "Avg_Lead_S0": 3.320382165605096,
+      "Service_Lvl_S0": 3.237791932059448,
+      "Avg_Cost_S1": 32.5184872611465,
+      "Service_Lvl_S1": 2.3089171974522293
+    },
+    {
+      "region": "Southwest",
+      "Order_Count": 2214,
+      "Avg_Distance_km": 1387.2659891598917,
+      "Avg_Cost_S0": 37.457330623306234,
+      "Total_Cost_S0": 82930.53,
+      "Avg_Lead_S0": 4.08383017163505,
+      "Service_Lvl_S0": 0.18066847335140018,
+      "Avg_Cost_S1": 37.108279132791324,
+      "Service_Lvl_S1": 0.0
+    },
+    {
+      "region": "West Coast",
+      "Order_Count": 3289,
+      "Avg_Distance_km": 2802.944998479781,
+      "Avg_Cost_S0": 56.81621769534813,
+      "Total_Cost_S0": 186868.54,
+      "Avg_Lead_S0": 6.860504712678626,
+      "Service_Lvl_S0": 0.0,
+      "Avg_Cost_S1": 22.98335968379447,
+      "Service_Lvl_S1": 63.39312861051991
+    }
+  ],
+  "stats": {
+    "chi2_stat": 12610.26,
+    "chi2_p": 0.0,
+    "chi2_dof": 5,
+    "anova_f": 1574.61,
+    "anova_p": 0.0,
+    "pearson_r": 0.5586,
+    "pearson_p": 0.0
+  },
+  "model_table": [
+    {
+      "Model": "Linear Regression",
+      "MAE ($)": 4.303,
+      "RMSE ($)": 6.416,
+      "R2 Score": 0.9175,
+      "Accuracy (%)": 91.7
+    },
+    {
+      "Model": "Random Forest",
+      "MAE ($)": 1.29,
+      "RMSE ($)": 1.629,
+      "R2 Score": 0.9947,
+      "Accuracy (%)": 99.5
+    },
+    {
+      "Model": "Gradient Boosting",
+      "MAE ($)": 1.29,
+      "RMSE ($)": 1.627,
+      "R2 Score": 0.9947,
+      "Accuracy (%)": 99.5
+    }
+  ],
+  "optimization": {
+    "cog_latitude": 38.1599,
+    "cog_longitude": -93.151,
+    "nearest_city": "Saint Louis / Springfield, MO area",
+    "annual_freight_s0": 697620.06,
+    "annual_freight_s1": 556454.85,
+    "annual_freight_savings_s1": 141165.21,
+    "est_additional_wh_holding_cost": 450000.0,
+    "net_annual_benefit": -308834.79
+  }
+}
